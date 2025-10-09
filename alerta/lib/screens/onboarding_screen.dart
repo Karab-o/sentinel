@@ -143,7 +143,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           Container(
             width: 120,
             height: 120,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: AppColors.emergencyRedLight,
               shape: BoxShape.circle,
             ),
@@ -156,7 +156,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           
           const SizedBox(height: AppDimensions.paddingXL),
           
-          Text(
+          const Text(
             'Welcome to\nPersonal Safety',
             style: AppTextStyles.h1,
             textAlign: TextAlign.center,
@@ -210,7 +210,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
+          const Text(
             'Key Features',
             style: AppTextStyles.h2,
             textAlign: TextAlign.center,
@@ -305,7 +305,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         children: [
           const SizedBox(height: AppDimensions.paddingL),
           
-          Text(
+          const Text(
             'Set Up Your Profile',
             style: AppTextStyles.h2,
             textAlign: TextAlign.center,
@@ -389,7 +389,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
+          const Text(
             'Permissions Required',
             style: AppTextStyles.h2,
             textAlign: TextAlign.center,

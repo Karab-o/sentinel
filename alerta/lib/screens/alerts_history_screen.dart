@@ -183,7 +183,7 @@ class _AlertsHistoryScreenState extends State<AlertsHistoryScreen> {
             Container(
               width: 120,
               height: 120,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: AppColors.backgroundGray,
                 shape: BoxShape.circle,
               ),
@@ -310,7 +310,7 @@ class _AlertsHistoryScreenState extends State<AlertsHistoryScreen> {
               Row(
                 children: [
                   if (alert.location != null) ...[
-                    Icon(
+                    const Icon(
                       Icons.location_on,
                       size: 16,
                       color: AppColors.textLight,
@@ -325,7 +325,7 @@ class _AlertsHistoryScreenState extends State<AlertsHistoryScreen> {
                     const SizedBox(width: AppDimensions.paddingM),
                   ],
                   
-                  Icon(
+                  const Icon(
                     Icons.contacts,
                     size: 16,
                     color: AppColors.textLight,
@@ -516,7 +516,7 @@ class _AlertsHistoryScreenState extends State<AlertsHistoryScreen> {
   }
 
   List<EmergencyAlert> _getFilteredAlerts(List<EmergencyAlert> alerts) {
-    var filtered = alerts.where((alert) {
+    final filtered = alerts.where((alert) {
       // Filter by type
       if (_selectedFilter != null && alert.type != _selectedFilter) {
         return false;

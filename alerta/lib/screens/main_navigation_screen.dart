@@ -18,7 +18,7 @@ class MainNavigationScreen extends StatelessWidget {
         return Scaffold(
           body: IndexedStack(
             index: navigationProvider.currentIndex,
-            children: [
+            children: const [
               HomeScreen(),
               ContactsScreen(),
               AlertsHistoryScreen(),

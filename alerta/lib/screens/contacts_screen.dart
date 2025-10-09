@@ -72,7 +72,7 @@ class _ContactsScreenState extends State<ContactsScreen> {
             Container(
               width: 120,
               height: 120,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: AppColors.backgroundGray,
                 shape: BoxShape.circle,
               ),
@@ -85,7 +85,7 @@ class _ContactsScreenState extends State<ContactsScreen> {
             
             const SizedBox(height: AppDimensions.paddingL),
             
-            Text(
+            const Text(
               'No Emergency Contacts',
               style: AppTextStyles.h2,
               textAlign: TextAlign.center,
@@ -216,7 +216,7 @@ class _ContactsScreenState extends State<ContactsScreen> {
                             onChanged: (value) {
                               appProvider.toggleContactActive(contact.id);
                             },
-                            activeColor: AppColors.safeGreen,
+                            activeThumbColor: AppColors.safeGreen,
                           ),
                         ],
                       ),
@@ -428,7 +428,7 @@ class _ContactsScreenState extends State<ContactsScreen> {
                 const SizedBox(height: AppDimensions.paddingM),
                 
                 DropdownButtonFormField<ContactRelationship>(
-                  value: selectedRelationship,
+                  initialValue: selectedRelationship,
                   decoration: const InputDecoration(
                     labelText: 'Relationship',
                     prefixIcon: Icon(Icons.family_restroom),

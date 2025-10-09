@@ -29,7 +29,7 @@ class LocationService {
   Future<AlertLocation?> getCurrentLocation() async {
     try {
       // Check if location services are enabled
-      bool serviceEnabled = await Geolocator.isLocationServiceEnabled();
+      final bool serviceEnabled = await Geolocator.isLocationServiceEnabled();
       if (!serviceEnabled) {
         throw Exception('Location services are disabled');
       }
@@ -48,7 +48,7 @@ class LocationService {
       }
 
       // Get current position with high accuracy
-      Position position = await Geolocator.getCurrentPosition(
+      final Position position = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high,
         timeLimit: const Duration(seconds: 10),
       );
@@ -72,7 +72,7 @@ class LocationService {
 
     // TODO: Implement reverse geocoding to get address
     // This would typically use a geocoding service like Google Maps API
-    String? address = await _reverseGeocode(
+    final String? address = await _reverseGeocode(
       location.latitude,
       location.longitude,
     );

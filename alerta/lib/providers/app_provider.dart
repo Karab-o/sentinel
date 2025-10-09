@@ -262,8 +262,4 @@ class AppProvider extends ChangeNotifier {
     await _locationService.requestLocationPermission();
   }
 
-  @override
-  void dispose() {
-    super.dispose();
-  }
 }

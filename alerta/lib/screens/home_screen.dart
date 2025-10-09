@@ -23,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen>
   // ignore: unused_field
   bool _isEmergencyMode = false;
   // ignore: unused_field
-  int _emergencyCountdown = 0;
+  final int _emergencyCountdown = 0;
 
   @override
   void initState() {
@@ -107,15 +107,15 @@ class _HomeScreenState extends State<HomeScreen>
       context: context,
       barrierDismissible: false,
       builder: (context) => AlertDialog(
-        title: Row(
+        title: const Row(
           children: [
-            const Icon(
+            Icon(
               Icons.warning,
               color: AppColors.emergencyRed,
               size: 28,
             ),
-            const SizedBox(width: 8),
-            const Text('Emergency Alert'),
+            SizedBox(width: 8),
+            Text('Emergency Alert'),
           ],
         ),
         content: Column(
@@ -232,15 +232,15 @@ class _HomeScreenState extends State<HomeScreen>
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Row(
+        title: const Row(
           children: [
-            const Icon(
+            Icon(
               Icons.check_circle,
               color: AppColors.safeGreen,
               size: 28,
             ),
-            const SizedBox(width: 8),
-            const Text('Alert Sent'),
+            SizedBox(width: 8),
+            Text('Alert Sent'),
           ],
         ),
         content: Column(
@@ -279,15 +279,15 @@ class _HomeScreenState extends State<HomeScreen>
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Row(
+        title: const Row(
           children: [
-            const Icon(
+            Icon(
               Icons.error,
               color: AppColors.error,
               size: 28,
             ),
-            const SizedBox(width: 8),
-            const Text('Alert Failed'),
+            SizedBox(width: 8),
+            Text('Alert Failed'),
           ],
         ),
         content: const Text(
@@ -482,7 +482,7 @@ class _HomeScreenState extends State<HomeScreen>
   Widget _buildEmergencyButton() {
     return Column(
       children: [
-        Text(
+        const Text(
           'Emergency Alert',
           style: AppTextStyles.h3,
           textAlign: TextAlign.center,
@@ -546,7 +546,7 @@ class _HomeScreenState extends State<HomeScreen>
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        const Text(
           'Quick Actions',
           style: AppTextStyles.h3,
         ),
@@ -665,7 +665,7 @@ class _HomeScreenState extends State<HomeScreen>
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
+            const Text(
               'Recent Alerts',
               style: AppTextStyles.h3,
             ),
